@@ -1,0 +1,52 @@
+$element: #303030;
+$elementHovered: #4e4e4e;
+$elementPadding: 10px;
+$elementMargin: 25px;
+$text: rgb(230, 230, 230);
+$borderColor: #484848;
+$radius: 7px;
+$inputColor: #00bc8c;
+$inputColorHovered: #07daa5;
+
+body {
+    background-color: #222222;
+    color: $text;
+    box-sizing: border-box;
+}
+
+hr {
+    border-color: $borderColor;
+    margin: 5px 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.input-color {
+    background-color: $inputColor;
+}
+
+.framed {
+    border: .5px solid $borderColor;
+    border-radius: $radius;
+    padding: $elementPadding;
+    background-color: $element;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1110px;
+}
+
+.main > * {
+    margin-bottom: $elementMargin;
+}
+
+@media (max-width: 1110px) {
+    .main {
+        margin: 0;
+        max-width: 100%;
+        padding: 5px;
+    }
+}

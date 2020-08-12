@@ -1,0 +1,74 @@
+@import '../../App.scss';
+
+.finish-button {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: $radius;
+  margin-top: 0;
+}
+
+.active-button {
+  background-color: $inputColor;
+  color: $text;
+}
+
+.inactive-button {
+  background-color: $element;
+  color: $text;
+  cursor: pointer;
+}
+
+.active-button:hover {
+  background-color: $inputColorHovered;
+}
+
+
+
+.list-and-bird {
+  display: flex;
+}
+
+.list-and-bird > div {
+  flex: 1;
+}
+
+.list-and-bird > div:first-child {
+  margin-right: $elementMargin;
+}
+
+.songbird-results > * {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.songbird-play-again-button {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: $radius;
+}
+
+
+
+@media (max-width: 1024px) {
+  .list-and-bird { 
+    flex-direction: column;
+    
+  }
+
+  .list-and-bird > div:first-child {
+    margin-right: 0;
+    margin-bottom: $elementMargin;
+  }
+
+  .songbird-navbar-element {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .songbird-navbar-element {
+    flex-basis: 50%;
+  }
+}
