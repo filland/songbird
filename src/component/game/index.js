@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import birdsData from '../../common/birdsData';
@@ -29,7 +30,9 @@ export default class Game extends React.Component {
     const { currentLevel } = this.state;
     const birds = [...birdsData[currentLevel]];
 
-    birds.forEach((bird) => bird.color = 'gray');
+    birds.forEach((bird) => {
+      bird.color = 'gray';
+    });
 
     this.setState({
       birds,
@@ -136,7 +139,9 @@ export default class Game extends React.Component {
 
     const nextLevel = currentLevel + 1;
     const birds = birdsData[nextLevel];
-    birds.forEach((bird) => bird.color = 'gray');
+    birds.forEach((bird) => {
+      bird.color = 'gray';
+    });
     this.setState({
       birds,
       currentLevel: nextLevel,
@@ -152,7 +157,9 @@ export default class Game extends React.Component {
   startNewGame = () => {
     const FIRST_LEVEL = 0;
     const birds = [...birdsData[FIRST_LEVEL]];
-    birds.forEach((bird) => bird.color = 'gray');
+    birds.forEach((bird) => {
+      bird.color = 'gray';
+    });
 
     this.setState({
       birds,

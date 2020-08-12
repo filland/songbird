@@ -48,3 +48,29 @@
 .selected-level {
   background-color: #00bc8c;
 }
+
+
+@media (max-width: 1024px) {
+  .navbar-list { 
+    flex-wrap: wrap;
+  }
+
+  .songbird-navbar-element {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .songbird-navbar-element {
+    flex-basis: 50%;
+  }
+
+  .navbar-logo-score {
+    img {
+      width: 160px;
+    }
+    .navbar-score {
+      font-size: 18px;
+    }
+  }
+}

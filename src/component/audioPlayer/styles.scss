@@ -7,6 +7,10 @@
   padding-right: 0;
 }
 
+.rhap_main {
+  flex-direction: column;
+}
+
 .rhap_container:focus, 
 .rhap_container > * :focus {
   outline: none;
@@ -14,6 +18,8 @@
 
 .rhap_controls-section > * {
   flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .rhap_additional-controls {
@@ -28,3 +34,16 @@
   color: $text;
 }
 
+@media (max-width: 767px) {
+  .rhap_progress-section {
+    margin-bottom: 20px;
+  }
+
+  .rhap_main-controls {
+    justify-content: left;
+  }
+
+  .rhap_main {
+    flex-direction: column;
+  }
+}
