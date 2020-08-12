@@ -145,7 +145,7 @@ export default class Game extends React.Component {
           : <>
             <BirdCard
               bird={correctBird}
-              hidden={correctBirdIndex !== selectedBirdIndex}
+              hidden={!levelFinished}
               expanded={false} />
             <div className="list-and-bird">
               <BirdsList birdsData={birds} selectBird={this.selectBird} />
