@@ -73,8 +73,10 @@ export default class Game extends React.Component {
         }
       }
 
+      const MAX_SCORE_FOR_LEVEL = 5;
+
       // add score if win
-      newScore += 10;
+      newScore += attempts >= 5 ? 0 : MAX_SCORE_FOR_LEVEL - attempts;
     } else {
       // add attempt if not win
       attemptsNumber += 1;
