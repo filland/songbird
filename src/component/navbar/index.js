@@ -10,7 +10,7 @@ export default function Navbar(props) {
         <div>
           <img src={logo} alt='logo' />
         </div>
-        <div className='navbar-score'>Score: {score}</div>
+        <div className='navbar-score'>Результат: {score}</div>
       </div>
       <div className="navbar-list">
         {birdsTypes.map((bird, index) => <div key={bird}

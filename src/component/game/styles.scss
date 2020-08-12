@@ -22,3 +22,16 @@
 .active-button:hover {
   background-color: $inputColorHovered;
 }
+
+
+.songbird-results > * {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.songbird-play-again-button {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: $radius;
+}

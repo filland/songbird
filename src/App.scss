@@ -17,6 +17,10 @@ hr {
     margin: 5px 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 .framed {
     border: .5px solid $borderColor;
     border-radius: $radius;
@@ -30,7 +34,7 @@ hr {
 }
 
 .main > * {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 
