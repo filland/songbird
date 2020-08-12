@@ -1,0 +1,24 @@
+@import '../../App.scss';
+
+.finish-button {
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: $radius;
+  margin-top: 0;
+}
+
+.active-button {
+  background-color: $inputColor;
+  color: $text;
+}
+
+.inactive-button {
+  background-color: $element;
+  color: $text;
+  cursor: pointer;
+}
+
+.active-button:hover {
+  background-color: $inputColorHovered;
+}

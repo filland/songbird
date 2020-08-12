@@ -1,0 +1,9 @@
+*.css
+*.scss
+*.html
+*.json
+serviceWorker.js
+*.jpg
+*.svg
+*.ttf
+*.otf

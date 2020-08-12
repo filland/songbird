@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+.bird {
+  display: flex;
+  flex-direction: column;
+}
+
+.bird-main {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7px;
+}
+
+.bird-main p {
+  margin: 0;
+}
+
+.bird-pic {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.bird-pic img {
+  border-radius: $radius;
+  width: 200px;
+  height: 155px;
+  object-fit: cover;
+}
+
+.bird-name-player {
+  flex: 4;
+}
+
+.bird-player {
+
+}

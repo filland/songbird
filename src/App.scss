@@ -1,0 +1,94 @@
+$element: #303030;
+$elementHovered: #4e4e4e;
+$elementPadding: 10px;
+$text: rgb(230, 230, 230);
+$borderColor: #484848;
+$radius: 7px;
+$inputColor: #00bc8c;
+$inputColorHovered: #07daa5;
+
+body {
+    background-color: #222222;
+    color: $text;
+}
+
+hr {
+    border-color: $borderColor;
+    margin: 5px 0;
+}
+
+.framed {
+    border: .5px solid $borderColor;
+    border-radius: $radius;
+    padding: $elementPadding;
+    background-color: $element;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 1110px;
+}
+
+.main > * {
+    margin: 20px;
+}
+
+
+.list-and-bird {
+    display: flex;
+}
+
+.list-and-bird > div {
+    flex: 1;
+}
+
+.list-and-bird > div:first-child {
+    margin-right: 20px;
+}
+
+// .main-menu {
+//     background-color: $menu;
+// }
+// .container {
+//     margin-left: 31px !important;
+//     position: absolute;
+//     top: 50px;
+//     left: 50%;
+//     transform: translate(-50%, 0%);
+// }
+// .loader.main {
+//     background-color: $primary;
+// }
+
+// .btn,
+// .btn:visited,
+// .btn:active,
+// .btn:focus {
+//     background-color: $menu;
+//     border: 2px solid $menu;
+//     color: $white;
+// }
+
+// .btn:hover {
+//     background-color: $buttons;
+//     border: 2px solid $buttons;
+//     color: $text;
+// }
+
+// @media (max-width: 1024px) {
+//     .main {
+//         margin: 0;
+//         max-width: 100%;
+//     }
+// }
+
+// @media (max-width: 767.98px) {
+//     .menu-ul {
+//         background-color: $menu;
+//     }
+
+//     .container {
+//         margin-left: 0px !important;
+//         margin-top: 45px !important;
+//     }
+// }

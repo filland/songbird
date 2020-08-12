@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.rhap_container  {
+  background-color: $element;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rhap_container:focus, 
+.rhap_container > * :focus {
+  outline: none;
+}
+
+.rhap_controls-section > * {
+  flex: 1;
+}
+
+.rhap_additional-controls {
+  display: none;
+}
+
+.rhap_main-controls-button {
+  color: $inputColor;
+}
+
+.rhap_time {
+  color: $text;
+}
+
