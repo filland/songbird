@@ -37,8 +37,7 @@ export default class Game extends React.Component {
     this.setState({
       birds,
       currentLevel: 0,
-      // correctBirdIndex: this.getRandomIndex(birds.length - 1),
-      correctBirdIndex: 1,
+      correctBirdIndex: this.getRandomIndex(birds.length - 1),
       selectedBirdIndex: -1,
       currentScore: 0,
       attempts: 0,
@@ -145,8 +144,7 @@ export default class Game extends React.Component {
     this.setState({
       birds,
       currentLevel: nextLevel,
-      correctBirdIndex: 1,
-      // correctBirdIndex: this.getRandomIndex(birds.length - 1),
+      correctBirdIndex: this.getRandomIndex(birds.length - 1),
       selectedBirdIndex: -1,
       attempts: 0,
       levelStarted: false,
@@ -164,8 +162,7 @@ export default class Game extends React.Component {
     this.setState({
       birds,
       currentLevel: FIRST_LEVEL,
-      // correctBirdIndex: this.getRandomIndex(birds.length - 1),
-      correctBirdIndex: 1,
+      correctBirdIndex: this.getRandomIndex(birds.length - 1),
       selectedBirdIndex: -1,
       currentScore: 0,
       attempts: 0,
@@ -195,11 +192,13 @@ export default class Game extends React.Component {
         {gameFinished ? <div className="songbird-results framed">
           <h2>Поздравляем!</h2>
           <p>Вы прошли викторину и набрали {currentScore} из 30 возможных баллов</p>
-          {currentScore !== 30
-            ? <div>
-              <button className='songbird-play-again-button active-button' onClick={this.startNewGame}>Попробовать еще раз</button>
-            </div>
-            : null}
+          <div>
+            <button
+              className='songbird-play-again-button active-button'
+              onClick={this.startNewGame}>
+              Попробовать еще раз
+              </button>
+          </div>
         </div>
           : <>
             <BirdCard
@@ -213,7 +212,12 @@ export default class Game extends React.Component {
                 : <BirdCard bird={selectedBird} expanded={true} />}
 
             </div>
-            <button className={`finish-button ${levelFinished ? 'active-button' : 'inactive-button'}`} onClick={this.nextLevel} disabled={!levelFinished}>Следующий уровень</button>
+            <button
+              className={`finish-button ${levelFinished ? 'active-button' : 'inactive-button'}`}
+              onClick={this.nextLevel}
+              disabled={!levelFinished}>
+              Следующий уровень
+            </button>
           </>
         }
       </div>);

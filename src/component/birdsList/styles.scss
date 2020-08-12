@@ -7,7 +7,7 @@
 .birds-list-item {
   display: flex;
   flex-direction: row;
-  padding: $elementPadding + 1;
+  padding: $elementPadding + 3;
   border-bottom: 1px solid $borderColor;
   cursor: pointer;
 }
