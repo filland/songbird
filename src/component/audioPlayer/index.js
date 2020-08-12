@@ -8,6 +8,7 @@ export default function Player(props) {
   return (<div className="songbird-audioplayer">
     <AudioPlayer
       autoPlay={false}
+      autoPlayAfterSrcChange={false}
       src={url}
       layout='horizontal-reverse'
       customAdditionalControls={[]}
