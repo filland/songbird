@@ -31,11 +31,9 @@ export default function BirdCard(props) {
       </div>
     </div>
     {expanded && (
-      <>
-        <div>
-          {bird.description}
-        </div>
-      </>
+      <div className='bird-description'>
+        {bird.description}
+      </div>
     )}
 
   </div>);

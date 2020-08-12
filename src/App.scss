@@ -1,6 +1,7 @@
 $element: #303030;
 $elementHovered: #4e4e4e;
 $elementPadding: 10px;
+$elementMargin: 15px;
 $text: rgb(230, 230, 230);
 $borderColor: #484848;
 $radius: 7px;
@@ -21,6 +22,10 @@ button:focus {
   outline: none;
 }
 
+.input-color {
+    background-color: $inputColor;
+}
+
 .framed {
     border: .5px solid $borderColor;
     border-radius: $radius;
@@ -34,7 +39,7 @@ button:focus {
 }
 
 .main > * {
-    margin-bottom: 20px;
+    margin-bottom: $elementMargin;
 }
 
 
@@ -47,7 +52,7 @@ button:focus {
 }
 
 .list-and-bird > div:first-child {
-    margin-right: 20px;
+    margin-right: $elementMargin;
 }
 
 // .main-menu {

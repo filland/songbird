@@ -80,7 +80,7 @@ export default class Game extends React.Component {
       for (let i = 0; i < birds.length; i += 1) {
         const bird = birds[i];
         if ((bird.id - 1) === index) {
-          bird.color = 'green';
+          bird.color = '#00bc8c';
         }
       }
 
