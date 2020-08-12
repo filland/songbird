@@ -28,7 +28,7 @@ export default class Game extends React.Component {
     this.setState({
       birds,
       currentLevel: 0,
-      correctBirdIndex: 1,
+      correctBirdIndex: this.getRandomIndex(birds.length - 1),
       selectedBirdIndex: -1,
       currentScore: 0,
       attempts: 0,
@@ -38,6 +38,8 @@ export default class Game extends React.Component {
       levelFinished: false,
     });
   }
+
+  getRandomIndex = (maxIndex) => Math.round(Math.random() * maxIndex);
 
   selectBird = (index) => {
     const {
@@ -115,7 +117,7 @@ export default class Game extends React.Component {
     this.setState({
       birds,
       currentLevel: nextLevel,
-      correctBirdIndex: 1,
+      correctBirdIndex: this.getRandomIndex(birds.length - 1),
       selectedBirdIndex: -1,
       attempts: 0,
       levelStarted: false,
