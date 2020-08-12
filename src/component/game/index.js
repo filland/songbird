@@ -5,19 +5,25 @@ import Navbar from '../navbar';
 import BirdCard from '../birdCard';
 import BirdsList from '../birdsList';
 
+import win from '../../files/win.mp3';
+import error from '../../files/error.mp3';
+
 import './styles.scss';
 
 export default class Game extends React.Component {
-  state = {
-    birds: [],
-    currentLevel: 0,
-    correctBirdIndex: -1,
-    selectedBirdIndex: -1,
-    currentScore: 0,
-    attempts: 0,
-    started: false,
-    finished: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      birds: [],
+      currentLevel: 0,
+      correctBirdIndex: -1,
+      selectedBirdIndex: -1,
+      currentScore: 0,
+      attempts: 0,
+      started: false,
+      finished: false,
+    };
+  }
 
   componentDidMount() {
     const { currentLevel } = this.state;
@@ -42,7 +48,7 @@ export default class Game extends React.Component {
 
   getRandomIndex = (maxIndex) => Math.round(Math.random() * maxIndex);
 
-  selectBird = (index) => {
+  selectBirdHandler = (index) => {
     const {
       correctBirdIndex,
       birds,
@@ -66,6 +72,8 @@ export default class Game extends React.Component {
 
     // check if bird was found (level finished)
     if (index === correctBirdIndex) {
+      this.playWinSound();
+
       // mark that current level is finished
       lFinished = true;
 
@@ -81,6 +89,8 @@ export default class Game extends React.Component {
       // add score if win
       newScore += attempts >= 5 ? 0 : MAX_SCORE_FOR_LEVEL - attempts;
     } else {
+      this.playErrorSound();
+
       // add attempt if not win
       attemptsNumber += 1;
 
@@ -99,6 +109,18 @@ export default class Game extends React.Component {
       levelFinished: lFinished,
       attempts: attemptsNumber,
     });
+  }
+
+  playWinSound() {
+    const winSound = new Audio(win);
+    winSound.volume = 0.05;
+    winSound.play();
+  }
+
+  playErrorSound() {
+    const errorSound = new Audio(error);
+    errorSound.volume = 0.05;
+    errorSound.play();
   }
 
   nextLevel = () => {
@@ -178,7 +200,7 @@ export default class Game extends React.Component {
               hidden={!levelFinished}
               expanded={false} />
             <div className="list-and-bird">
-              <BirdsList birdsData={birds} selectBird={this.selectBird} />
+              <BirdsList birdsData={birds} selectBird={this.selectBirdHandler} />
               {selectedBirdIndex === -1
                 ? <div className='framed'>Послушайте голос птицы и выберите название из списка слева</div>
                 : <BirdCard bird={selectedBird} expanded={true} />}
