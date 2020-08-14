@@ -1,13 +1,13 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
-import birdsData from '../../common/birdsData';
 import Navbar from '../navbar';
 import BirdCard from '../birdCard';
 import BirdsList from '../birdsList';
 
-import win from '../../files/win.mp3';
-import error from '../../files/error.mp3';
+import birdsData from '../../data/birdsData';
+import win from '../../data/win.mp3';
+import error from '../../data/error.mp3';
 
 import './styles.scss';
 
@@ -208,7 +208,7 @@ export default class Game extends React.Component {
             <div className="list-and-bird">
               <BirdsList birdsData={birds} selectBird={this.selectBirdHandler} />
               {selectedBirdIndex === -1
-                ? <div className='framed'>Послушайте голос птицы и выберите название из списка слева</div>
+                ? <div className='framed'>Послушайте голос птицы и выберите название из списка</div>
                 : <BirdCard bird={selectedBird} expanded={true} />}
 
             </div>

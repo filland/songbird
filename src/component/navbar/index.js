@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import logo from '../../files/logo.svg';
+import logo from '../../data/logo.svg';
 
 export default function Navbar(props) {
   const { birdsTypes, currentLevel, score } = props;

@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.scss';
 import Player from '../audioPlayer';
+import defaultBirdPic from '../../data/default-bird.jpg';
 
 export default function BirdCard(props) {
   const defaultBird = {
-    image: './default-bird.jpg',
+    image: defaultBirdPic,
   };
   const { expanded, hidden, bird = defaultBird } = props;
   return (<div className="bird framed">
